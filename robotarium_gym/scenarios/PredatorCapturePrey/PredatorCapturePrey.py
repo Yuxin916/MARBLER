@@ -168,8 +168,9 @@ class PredatorCapturePrey(BaseEnv):
 
         info['dist_travelled'] = dist
         if terminated:
-            print(f"Remaining prey: {updated_state['num_prey']} {return_message}")   
-        
+            pass
+            # print(f"Remaining prey: {updated_state['num_prey']} {return_message}")
+
         if self.args.save_gif:
             info['frames'] = frames
         
