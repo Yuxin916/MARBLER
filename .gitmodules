@@ -1,0 +1,3 @@
+[submodule "epymarl"]
+	path = epymarl
+	url = git@github.com:Yuxin916/epymarl.git
