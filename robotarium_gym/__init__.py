@@ -7,6 +7,7 @@ _particles = {
     "Simple": "Simple-v0",
     "ArcticTransport": "ArcticTransport-v0",
     "MaterialTransport": "MaterialTransport-v0"
+    # "HeterogeneousSensorNetwork": "HeterogeneousSensorNetwork-v0"
 }
 
 for scenario_name, gymkey in _particles.items():

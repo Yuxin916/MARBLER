@@ -9,3 +9,4 @@ robotarium_gym.egg-info/
 logs/
 gifs/
 /robotarium_python_simulator/
+/robotarium_gym/scenarios/HeterogeneousSensorNetwork/
