@@ -1,17 +1,41 @@
-# MARBLER: Multi-Agent RL Benchmark and Learning Environment for the Robotarium
-Team: Reza Torbati, Shubham Lohiya, Shivika Singh, Meher Nigam
+[//]: # (# MARBLER: Multi-Agent RL Benchmark and Learning Environment for the Robotarium)
 
-## Installation Instructions
-1. Create new Conda Environment: `conda create -n MARBLER python=3.8 && conda activate MARBLER`. 
-- Note that python 3.8 is only chosen to ensure compatitbility with EPyMARL.
-2. Download and Install the [Robotarium Python Simulator](https://github.com/robotarium/robotarium_python_simulator)
-- As of now, the most recent commit our code works with is 6bb184e. The code will run with the most recent push to the Robotarium but it will crash during training.
-3. Install our environment by running `pip install -e .` in this directory
-4. To test successfull installation, run `python3 -m robotarium_gym.main` to run a pretrained model
+[//]: # (Team: Reza Torbati, Shubham Lohiya, Shivika Singh, Meher Nigam)
 
-## Usage
-* To look at current scenarios or create new ones or to evaluate trained models, look at the README in robotarium_gym
-* To upload the agents to the Robotarium, look at the README in robotarium_eval
+[//]: # (## Installation Instructions)
+
+[//]: # (1. Create new Conda Environment: `conda create -n MARBLER python=3.8 && conda activate MARBLER`. )
+
+[//]: # (## Installation Instructions)
+
+[//]: # (1. Create new Conda Environment: `conda create -n MARBLER python=3.8 && conda activate MARBLER`. )
+
+[//]: # (- Note that python 3.8 is only chosen to ensure compatitbility with EPyMARL.)
+
+[//]: # (2. Download and Install the [Robotarium Python Simulator]&#40;https://github.com/robotarium/robotarium_python_simulator&#41;)
+
+[//]: # (- As of now, the most recent commit our code works with is 6bb184e. The code will run with the most recent push to the Robotarium but it will crash during training.)
+
+[//]: # (3. Install our environment by running `pip install -e .` in this directory)
+
+[//]: # (4. )
+
+## Evaluation
+To evaluate a trained model, 
+   1. Ensure `model.th` model and `config.json` are in the `model` folder in corresponding 
+   `robotarium_gym/scenarios`
+   2. Modify the `config.yaml` file in the corresponding scenario to use the new model.
+      
+      The pretrained model is defined in each scenario's config.yaml file: 
+        - `model_config_file`
+        - `model_file`
+        - `actor_file`
+        - `actor_class`
+   3. run `main.py` in `robotarium_gym` with `--scenario <scenario_name>`. 
+   4. If visualizations are desired, set show_figure_frequency in config.yaml to 1 
+   5. To upload the agents to the Robotarium, look at the `README` in `robotarium_eval`
+
+## Training with HARL
 
 ## Training with EPyMARL
 1. Download and Install [EPyMARL](https://github.com/uoe-agents/epymarl). On Ubuntu 22.04, to successfully install EPyMARL, I have to: 
@@ -29,11 +53,18 @@ Team: Reza Torbati, Shubham Lohiya, Shivika Singh, Meher Nigam
 4. Update the scenario's config.yaml to use the newly trained agents
 
 
-## Citing
-If you use this in your work please cite:
-* Our work:
->Reza Torbati, Shubham Lohiya, Shivika Singh, Meher Shashwat Nigam, & Harish Ravichandar. (2023). MARBLER: An Open Platform for Standarized Evaluation of Multi-Robot Reinforcement Learning Algorithms.
-* The Robotarium: 
->S. Wilson, P. Glotfelter, L. Wang, S. Mayya, G. Notomista, M. Mote, and M. Egerstedt. The robotarium: Globally impactful opportunities, challenges, and lessons learned in remote-access, distributed control of multirobot systems. IEEE Control Systems Magazine, 40(1):26–44, 2020.
-* Additionally, if you use the default agents in this repo, also cite EPyMARL:
->Papoudakis, Georgios, et al. "Benchmarking multi-agent deep reinforcement learning algorithms in cooperative tasks." arXiv preprint arXiv:2006.07869 (2020).
+[//]: # (## Citing)
+
+[//]: # (If you use this in your work please cite:)
+
+[//]: # (* Our work:)
+
+[//]: # (>Reza Torbati, Shubham Lohiya, Shivika Singh, Meher Shashwat Nigam, & Harish Ravichandar. &#40;2023&#41;. MARBLER: An Open Platform for Standarized Evaluation of Multi-Robot Reinforcement Learning Algorithms.)
+
+[//]: # (* The Robotarium: )
+
+[//]: # (>S. Wilson, P. Glotfelter, L. Wang, S. Mayya, G. Notomista, M. Mote, and M. Egerstedt. The robotarium: Globally impactful opportunities, challenges, and lessons learned in remote-access, distributed control of multirobot systems. IEEE Control Systems Magazine, 40&#40;1&#41;:26–44, 2020.)
+
+[//]: # (* Additionally, if you use the default agents in this repo, also cite EPyMARL:)
+
+[//]: # (>Papoudakis, Georgios, et al. "Benchmarking multi-agent deep reinforcement learning algorithms in cooperative tasks." arXiv preprint arXiv:2006.07869 &#40;2020&#41;.)
