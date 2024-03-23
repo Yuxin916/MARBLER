@@ -1,11 +1,3 @@
-## Evaluating Trained Models
-1. Ensure that the trained weights are in the models folder for the scenario the model was trained in
-- Requires the agent.th file (location should be printed in the cout of the terminal the model was trained in, typically in EPyMARL/results/models/...)
-- Requires the config.json file (typically in EPyMARL/results/algorithm_name/gym:scenario/...)
-2. Update the scenario's config.yaml to point to the new model
-- This will require updating `model_config_file` and `model_file` and possibly `actor_file` and `actor_class`
-3. Run `python robotarium_gym.main --scenario <SCENARIO_NAME>`
-- If visualizations are desired, set show_figure_frequency in config.yaml to 1
 
 ## Creating Scenarios
 ### Scenario Code Structure
