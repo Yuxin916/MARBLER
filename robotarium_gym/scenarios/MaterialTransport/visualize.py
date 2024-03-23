@@ -6,10 +6,10 @@ from robotarium_gym.scenarios.base import BaseVisualization
 class Visualize(BaseVisualization):
     def __init__(self,args):
         self.args = args
-        self.agent_marker_size_m = .15
+        self.agent_marker_size_m = .25
         self.zone1_marker_size_m = args.zone1_radius
-        self.line_width = 3
-        self.CM = plt.cm.get_cmap('Spectral', 5) # Agent/goal color scheme
+        self.line_width = 4
+        self.CM = plt.cm.get_cmap('Spectral', 6) # Agent/goal color scheme
         self.show_figure = True
 
     def initialize_markers(self, robotarium, agents):

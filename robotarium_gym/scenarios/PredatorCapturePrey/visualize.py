@@ -6,7 +6,7 @@ class Visualize(BaseVisualization):
         self.predator_marker_size_m = args.predator_radius
         self.capture_marker_size_m = args.capture_radius
         self.goal_marker_size_m = .05
-        self.line_width = 1
+        self.line_width = 3  # Line width for radius
         self.CM = plt.cm.get_cmap('hsv', 7) # Agent/goal color scheme
         self.show_figure = True
     
